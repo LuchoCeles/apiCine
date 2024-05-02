@@ -48,6 +48,23 @@ public class CombosController : ControllerBase
     [Route("CombosController/Modificar")]
     public BaseResponse Modificar([FromBody] CombosModel dataInput)
     {
+        CombosModel? tmp = DataList.FirstOrDefault(x => x.id == dataInput.id);
+        if (tmp != null)
+        {
+            DataList.Remove(tmp);
+            tmp = dataInput;
+            DataList.Add(tmp);
+            return new BaseResponse(true, (int)HttpStatusCode.Created, "Modificado");
+        }
+        else
+        {
+            return new BaseResponse(true, (int)HttpStatusCode.Created, "No encontrado");
+        }
+    }
+    [HttpPatch]
+    [Route("CombosController/ModificarParcial")]
+    public BaseResponse ModificarParcial([FromBody] CombosModel dataInput)//Para mejorar
+    {
         int i = DataList.FindIndex(x => x.id == dataInput.id);
         if (dataInput.combo != null) DataList[i].combo = dataInput.combo;
         if (dataInput.descripcion != null) DataList[i].descripcion = dataInput.descripcion;
