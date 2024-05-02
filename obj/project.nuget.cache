@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u9UVChVFPqOstxFwHduk+q3vnC7Y6Z+Pgac3/ejXVe3j+4Utx8gsepkTIlRllRi46vcidgfNx5N4jyclRmmVuw==",
+  "dgSpecHash": "jLK/+bk1lF4bzrCs8WNmNqkRjQJGi0gNKOEoHGmRCAjCw1wUC+RFt8tO70d+em0JaS73fo7rvzXezacK/MdSmA==",
   "success": true,
-  "projectFilePath": "D:\\algoritmos\\api\\ATDapi.csproj",
+  "projectFilePath": "D:\\Apis\\apiCine\\ATDapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hilet.HILET\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\hilet.HILET\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

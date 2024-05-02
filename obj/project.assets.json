@@ -433,11 +433,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\algoritmos\\api\\ATDapi.csproj",
+      "projectUniqueName": "D:\\Apis\\apiCine\\ATDapi.csproj",
       "projectName": "ATDapi",
-      "projectPath": "D:\\algoritmos\\api\\ATDapi.csproj",
+      "projectPath": "D:\\Apis\\apiCine\\ATDapi.csproj",
       "packagesPath": "C:\\Users\\hilet.HILET\\.nuget\\packages\\",
-      "outputPath": "D:\\algoritmos\\api\\obj\\",
+      "outputPath": "D:\\Apis\\apiCine\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hilet.HILET\\AppData\\Roaming\\NuGet\\NuGet.Config",
