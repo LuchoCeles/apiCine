@@ -30,11 +30,18 @@ public class CombosController : ControllerBase
 
     [HttpDelete]
     [Route("CombosController/Delete")]
-    public BaseResponse Delete([FromBody] CombosModel dataInput)
+    public BaseResponse Delete([FromQuery] Guid id)
     {
-        var n = DataList.FirstOrDefault(x => x.id == dataInput.id);
-        if (n != null) DataList.Remove(n);
-        return new BaseResponse(true, (int)HttpStatusCode.Created, "Eliminado");
+        CombosModel? n = DataList.FirstOrDefault(x => x.id == id);
+        if (n == null)
+        {
+            return new BaseResponse(false, (int)HttpStatusCode.NotFound, "El objeto no fue encontrado");
+        }
+        else
+        {
+            DataList.Remove(n);
+            return new BaseResponse(true, (int)HttpStatusCode.OK, "Objeto parcialmente eliminado");
+        }
     }
 
     [HttpPut]
