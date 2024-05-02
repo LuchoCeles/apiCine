@@ -19,7 +19,7 @@ public class DemoController : ControllerBase
 
     [HttpPost]
     [Route("Post")]
-    public BaseResponse Post([FromBody]SimpleModel dataInput)
+    public BaseResponse Post([FromBody] SimpleModel dataInput)
     {
         dataInput.id = Guid.NewGuid();
         DataList.Add(dataInput);
@@ -28,28 +28,28 @@ public class DemoController : ControllerBase
 
     [HttpPut]
     [Route("Put")]
-    public BaseResponse Put([FromBody]SimpleModel dataInput)
+    public BaseResponse Put([FromBody] SimpleModel dataInput)
     {
-        if(dataInput.id == null)
+        if (dataInput.id == null)
         {
             return new BaseResponse(false, (int)HttpStatusCode.BadRequest, "El parametro id es requerido");
         }
 
         SimpleModel? tmp = DataList.FirstOrDefault(x => x.id == dataInput.id);
 
-        if(tmp == null)
+        if (tmp == null)
         {
             return new BaseResponse(false, (int)HttpStatusCode.NotFound, "El objeto no fue encontrado");
         }
         else
         {
             DataList.Remove(tmp);
-            if(dataInput.message != null)
+            if (dataInput.message != null)
             {
                 tmp.message = dataInput.message;
             }
 
-            if(dataInput.number != null)
+            if (dataInput.number != null)
             {
                 tmp.number = dataInput.number;
             }
@@ -62,16 +62,16 @@ public class DemoController : ControllerBase
 
     [HttpPatch]
     [Route("Patch")]
-    public BaseResponse Patch([FromBody]SimpleModel dataInput)
+    public BaseResponse Patch([FromBody] SimpleModel dataInput)
     {
-        if(dataInput.id == null)
+        if (dataInput.id == null)
         {
             return new BaseResponse(false, (int)HttpStatusCode.BadRequest, "El parametro id es requerido");
         }
 
         SimpleModel? tmp = DataList.FirstOrDefault(x => x.id == dataInput.id);
 
-        if(tmp == null)
+        if (tmp == null)
         {
             return new BaseResponse(false, (int)HttpStatusCode.NotFound, "El objeto no fue encontrado");
         }
@@ -86,11 +86,11 @@ public class DemoController : ControllerBase
 
     [HttpDelete]
     [Route("Delete")]
-    public BaseResponse Delete([FromQuery]Guid id)
+    public BaseResponse Delete([FromQuery] Guid id)
     {
         SimpleModel? tmp = DataList.FirstOrDefault(x => x.id == id);
 
-        if(tmp == null)
+        if (tmp == null)
         {
             return new BaseResponse(false, (int)HttpStatusCode.NotFound, "El objeto no fue encontrado");
         }

@@ -22,11 +22,10 @@ public class CarteleraController : ControllerBase
     }
 
     [HttpPost]
-    [Route ("CarteleraController/Create")]
-    public BaseResponse Post([FromBody]CarteleraModel dataInput)
+    [Route("CarteleraController/Create")]
+    public BaseResponse Post([FromBody] CarteleraModel dataInput)
     {
-        var l = dataInput;
         DataList.Add(dataInput);
-        return new BaseResponse(true,(int)HttpStatusCode.Created, "hola");
+        return new BaseResponse(true, (int)HttpStatusCode.Created, "Creado");
     }
 }
