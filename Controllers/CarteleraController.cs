@@ -47,7 +47,7 @@ public class CarteleraController : ControllerBase
 
     [HttpPut]
     [Route("CarteleraController/Modificar")]
-    public BaseResponse Modificar([FromBody] CombosModel dataInput)
+    public BaseResponse Modificar([FromBody] CarteleraModel dataInput)
     {
         CarteleraModel? tmp = DataList.FirstOrDefault(x => x.id == dataInput.id);
         if (tmp != null)
