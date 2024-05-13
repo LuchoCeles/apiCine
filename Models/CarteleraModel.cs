@@ -4,7 +4,7 @@ namespace ATDapi.Models;
 
 public class CarteleraModel
 {
-    public Guid? id { get; set; } // para que este valor pueda ser null ?
+    public int? id { get; set; } // para que este valor pueda ser null ?
     public string titulo { get; set; }
     public string descripcion { get; set; }
     public string genero { get; set; }

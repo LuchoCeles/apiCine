@@ -12,26 +12,35 @@ namespace ATDapi.Controllers;
 public class CarteleraController : ControllerBase
 {
     public static List<CarteleraModel> DataList = new List<CarteleraModel>();
-
+    public static int id = 0;
     [HttpGet]
     [Route("CarteleraController/Get")]
-
     public BaseResponse Get()
     {
         return new DataResponse<List<CarteleraModel>>(true, (int)HttpStatusCode.OK, "Lista de cartelera", DataList);
+    }
+
+    [HttpGet]
+    [Route("CarteleraController/GetById")]
+    public CarteleraModel GetById([FromQuery] int id)
+    {
+        CarteleraModel? n = DataList.FirstOrDefault(x => x.id == id);
+        return n;
     }
 
     [HttpPost]
     [Route("CarteleraController/Create")]
     public BaseResponse Post([FromBody] CarteleraModel dataInput)
     {
+        dataInput.id = id;
+        id++;
         DataList.Add(dataInput);
         return new BaseResponse(true, (int)HttpStatusCode.Created, "Creado");
     }
 
     [HttpDelete]
     [Route("CarteleraController/Delete")]
-    public BaseResponse Delete([FromQuery] Guid id)
+    public BaseResponse Delete([FromQuery] int id)
     {
         CarteleraModel? n = DataList.FirstOrDefault(x => x.id == id);
         if (n == null)
@@ -70,7 +79,7 @@ public class CarteleraController : ControllerBase
         {
             return new BaseResponse(false, (int)HttpStatusCode.BadRequest, "El parametro id es requerido");
         }
-        
+
         CarteleraModel? tmp = DataList.FirstOrDefault(x => x.id == dataInput.id);
         if (tmp != null)
         {
