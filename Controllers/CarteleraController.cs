@@ -12,7 +12,6 @@ namespace ATDapi.Controllers;
 public class CarteleraController : ControllerBase
 {
     public static List<CarteleraModel> DataList = new List<CarteleraModel>();
-    public static int id = 0;
     [HttpGet]
     [Route("CarteleraController/Get")]
     public BaseResponse Get()
@@ -32,8 +31,6 @@ public class CarteleraController : ControllerBase
     [Route("CarteleraController/Create")]
     public BaseResponse Post([FromBody] CarteleraModel dataInput)
     {
-        dataInput.id = id;
-        id++;
         DataList.Add(dataInput);
         return new BaseResponse(true, (int)HttpStatusCode.Created, "Creado");
     }

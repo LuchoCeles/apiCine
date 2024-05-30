@@ -1,1 +1,148 @@
-{"_type":"export","__export_format":4,"__export_date":"2024-05-16T12:35:30.736Z","__export_source":"insomnia.desktop.app:v8.6.1","resources":[{"_id":"req_390833ba2ea44e938c50881e06d63d49","parentId":"wrk_b8df010bdb764095be17ceac843054a6","modified":1715862888114,"created":1715862865183,"url":"http://localhost:8080/CarteleraController/Create","name":"Pelicula 3","description":"","method":"POST","body":{"mimeType":"application/json","text":"        {\n        \"titulo\": \"Kung Fu Panda 4\",\n        \"descripcion\":  \"Después de tres aventuras desafiando a la muerte y derrotando a villanos de clase mundial con su incomparable coraje y sus alocadas habilidades en las artes marciales, Po, el Guerrero Dragón, es llamado por el destino para tomarse un descanso. Específicamente, se le pide que se convierta en el líder espiritual del Valle de la Paz. Esto plantea un par de problemas obvios. En primer lugar, Po sabe tanto de liderazgo espiritual como de dieta paleo, y en segundo lugar, necesita encontrar y entrenar rápidamente a un nuevo Guerrero Dragón antes de poder asumir su nuevo y elevado cargo.\",       \n        \"genero\": \"Genero: Infantil, Accion\",\n        \"director\": \"Direccion: Mike Mitchell\",\n        \"actores\": \"Actores: Jack Black, Awkwafina\",\n        \"url\": \"./img_peliculas/img_2/panda_2.jpg\"\n        }"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/8.6.1"}],"authentication":{},"metaSortKey":-1715862865183,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"wrk_b8df010bdb764095be17ceac843054a6","parentId":null,"modified":1715862722309,"created":1715862722309,"name":"Cartelera","description":"","scope":"collection","_type":"workspace"},{"_id":"req_9e412aac546a444a9cc4040eb8dc9177","parentId":"wrk_b8df010bdb764095be17ceac843054a6","modified":1715862859448,"created":1715862835085,"url":"http://localhost:8080/CarteleraController/Create","name":"Pelicula 2","description":"","method":"POST","body":{"mimeType":"application/json","text":"        {\n        \"titulo\": \"Un gato con suerte\",\n        \"descripcion\":  \"Beckett es un gato mimado y egoísta que da por sentada la suerte que ha tenido. Sin embargo, todo eso está a punto de cambiar cuando, por descuido, pierde su novena vida. Sin vidas restantes y enfrentado a lo inevitable, Beckett suplica que las cosas vuelvan a ser como antes. Al principio su petición es rechazada, pero en un momento de empatía excepcional, el 'Guardián' cambia de opinión y le permite regresar a la Tierra con una vida completamente nueva. Sin embargo, lo que no se da cuenta de inmediato es que cada una de estas nuevas vidas lo verá regresar en una variedad de formas diferentes... Beckett pasará de ser una mascota gloriosamente ensimismada a un héroe abnegado; cada una de sus nuevas formas le enseñará una lección valiosa para encontrar la mejor versión de ti mismo.\",\n        \"genero\": \"Genero: Infantil\",\n        \"director\": \"Direccion: Chris Jenkins\",\n        \"actores\": \"Actores: Mo Gilligan, Simone Ashley\",\n        \"url\": \"./img_peliculas/img_2/michi_2.jpg\"\n        }"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/8.6.1"}],"authentication":{},"metaSortKey":-1715862835085,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_bfb8fbbfedcc4981ab9df624b5e15250","parentId":"wrk_b8df010bdb764095be17ceac843054a6","modified":1715862833577,"created":1715862735627,"url":"http://localhost:8080/CarteleraController/Create","name":"Pelicula 1","description":"","method":"POST","body":{"mimeType":"application/json","text":"        {\n        \"titulo\": \"Godzilla y Kong: El nuevo imperio\",\n        \"descripcion\":  \"¡La batalla épica continúa! La película de Legendary Pictures continúa el explosivo enfrentamiento de “Godzilla vs. Kong” con una aventura completamente nueva que enfrenta al todopoderoso Kong y al temible Godzilla contra una colosal amenaza no descubierta escondida dentro de nuestro mundo, desafiando su propia existencia y la nuestra. “Godzilla y Kong: El nuevo imperio” profundiza en las historias de estos Titanes y sus orígenes, así como en los misterios de la Isla Calavera y más allá, mientras descubre la batalla mítica que ayudó a forjar a estos seres extraordinarios y los unió a la humanidad para siempre\",\n        \"genero\": \"Genero: Accion\",\n        \"director\": \"Direccion: Adam Wingard\",\n        \"actores\": \"Actores: Rebecca Hall, Brian Tyree Henry\",\n        \"url\": \"./img_peliculas/img_2/kong_2.jpg\"\n        }"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"insomnia/8.6.1"}],"authentication":{},"metaSortKey":-1715862735627,"isPrivate":false,"pathParameters":[],"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"env_6ff306cdc48d05f4e66bcd2c8a9651355a62ff3c","parentId":"wrk_b8df010bdb764095be17ceac843054a6","modified":1715862722312,"created":1715862722312,"name":"Base Environment","data":{},"dataPropertyOrder":null,"color":null,"isPrivate":false,"metaSortKey":1715862722312,"_type":"environment"},{"_id":"jar_6ff306cdc48d05f4e66bcd2c8a9651355a62ff3c","parentId":"wrk_b8df010bdb764095be17ceac843054a6","modified":1715862722314,"created":1715862722314,"name":"Default Jar","cookies":[],"_type":"cookie_jar"}]}
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2024-05-16T12:35:30.736Z",
+    "__export_source": "insomnia.desktop.app:v8.6.1",
+    "resources": [
+        {
+            "_id": "req_390833ba2ea44e938c50881e06d63d49",
+            "parentId": "wrk_b8df010bdb764095be17ceac843054a6",
+            "modified": 1715862888114,
+            "created": 1715862865183,
+            "url": "http://localhost:8080/CarteleraController/Create",
+            "name": "Pelicula 3",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "        {\n        \"titulo\": \"Kung Fu Panda 4\",\n        \"descripcion\":  \"Después de tres aventuras desafiando a la muerte y derrotando a villanos de clase mundial con su incomparable coraje y sus alocadas habilidades en las artes marciales, Po, el Guerrero Dragón, es llamado por el destino para tomarse un descanso. Específicamente, se le pide que se convierta en el líder espiritual del Valle de la Paz. Esto plantea un par de problemas obvios. En primer lugar, Po sabe tanto de liderazgo espiritual como de dieta paleo, y en segundo lugar, necesita encontrar y entrenar rápidamente a un nuevo Guerrero Dragón antes de poder asumir su nuevo y elevado cargo.\",       \n        \"genero\": \"Genero: Infantil, Accion\",\n        \"director\": \"Direccion: Mike Mitchell\",\n        \"actores\": \"Actores: Jack Black, Awkwafina\",\n        \"url\": \"./img_peliculas/img_2/panda_2.jpg\"\n        }"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1715862865183,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "wrk_b8df010bdb764095be17ceac843054a6",
+            "parentId": null,
+            "modified": 1715862722309,
+            "created": 1715862722309,
+            "name": "Cartelera",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_9e412aac546a444a9cc4040eb8dc9177",
+            "parentId": "wrk_b8df010bdb764095be17ceac843054a6",
+            "modified": 1715862859448,
+            "created": 1715862835085,
+            "url": "http://localhost:8080/CarteleraController/Create",
+            "name": "Pelicula 2",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "        {\n        \"titulo\": \"Un gato con suerte\",\n        \"descripcion\":  \"Beckett es un gato mimado y egoísta que da por sentada la suerte que ha tenido. Sin embargo, todo eso está a punto de cambiar cuando, por descuido, pierde su novena vida. Sin vidas restantes y enfrentado a lo inevitable, Beckett suplica que las cosas vuelvan a ser como antes. Al principio su petición es rechazada, pero en un momento de empatía excepcional, el 'Guardián' cambia de opinión y le permite regresar a la Tierra con una vida completamente nueva. Sin embargo, lo que no se da cuenta de inmediato es que cada una de estas nuevas vidas lo verá regresar en una variedad de formas diferentes... Beckett pasará de ser una mascota gloriosamente ensimismada a un héroe abnegado; cada una de sus nuevas formas le enseñará una lección valiosa para encontrar la mejor versión de ti mismo.\",\n        \"genero\": \"Genero: Infantil\",\n        \"director\": \"Direccion: Chris Jenkins\",\n        \"actores\": \"Actores: Mo Gilligan, Simone Ashley\",\n        \"url\": \"./img_peliculas/img_2/michi_2.jpg\"\n        }"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1715862835085,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_bfb8fbbfedcc4981ab9df624b5e15250",
+            "parentId": "wrk_b8df010bdb764095be17ceac843054a6",
+            "modified": 1715862833577,
+            "created": 1715862735627,
+            "url": "http://localhost:8080/CarteleraController/Create",
+            "name": "Pelicula 1",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "        {\n        \"titulo\": \"Godzilla y Kong: El nuevo imperio\",\n        \"descripcion\":  \"¡La batalla épica continúa! La película de Legendary Pictures continúa el explosivo enfrentamiento de “Godzilla vs. Kong” con una aventura completamente nueva que enfrenta al todopoderoso Kong y al temible Godzilla contra una colosal amenaza no descubierta escondida dentro de nuestro mundo, desafiando su propia existencia y la nuestra. “Godzilla y Kong: El nuevo imperio” profundiza en las historias de estos Titanes y sus orígenes, así como en los misterios de la Isla Calavera y más allá, mientras descubre la batalla mítica que ayudó a forjar a estos seres extraordinarios y los unió a la humanidad para siempre\",\n        \"genero\": \"Genero: Accion\",\n        \"director\": \"Direccion: Adam Wingard\",\n        \"actores\": \"Actores: Rebecca Hall, Brian Tyree Henry\",\n        \"url\": \"./img_peliculas/img_2/kong_2.jpg\"\n        }"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1715862735627,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_6ff306cdc48d05f4e66bcd2c8a9651355a62ff3c",
+            "parentId": "wrk_b8df010bdb764095be17ceac843054a6",
+            "modified": 1715862722312,
+            "created": 1715862722312,
+            "name": "Base Environment",
+            "data": {},
+            "dataPropertyOrder": null,
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1715862722312,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_6ff306cdc48d05f4e66bcd2c8a9651355a62ff3c",
+            "parentId": "wrk_b8df010bdb764095be17ceac843054a6",
+            "modified": 1715862722314,
+            "created": 1715862722314,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        }
+    ]
+}
