@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hilet.HILET\\api-cine\\ATDapi.csproj": {}
+    "C:\\Users\\hilet.HILET\\apiCine\\ATDapi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hilet.HILET\\api-cine\\ATDapi.csproj": {
+    "C:\\Users\\hilet.HILET\\apiCine\\ATDapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hilet.HILET\\api-cine\\ATDapi.csproj",
+        "projectUniqueName": "C:\\Users\\hilet.HILET\\apiCine\\ATDapi.csproj",
         "projectName": "ATDapi",
-        "projectPath": "C:\\Users\\hilet.HILET\\api-cine\\ATDapi.csproj",
+        "projectPath": "C:\\Users\\hilet.HILET\\apiCine\\ATDapi.csproj",
         "packagesPath": "C:\\Users\\hilet.HILET\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hilet.HILET\\api-cine\\obj\\",
+        "outputPath": "C:\\Users\\hilet.HILET\\apiCine\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hilet.HILET\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,9 +45,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.Data.Odbc": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [

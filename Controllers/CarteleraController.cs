@@ -12,81 +12,94 @@ namespace ATDapi.Controllers;
 public class CarteleraController : ControllerBase
 {
     public static List<CarteleraModel> DataList = new List<CarteleraModel>();
+    public Repository repository = new Repository();
     [HttpGet]
     [Route("CarteleraController/Get")]
-    public BaseResponse Get()
+    public async Task<BaseResponse> Get()
     {
-        return new DataResponse<List<CarteleraModel>>(true, (int)HttpStatusCode.OK, "Lista de cartelera", DataList);
+        try
+        {
+            var rsp = await repository.GetListBy<dynamic>(CarteleraModel.GetAll());
+            return new DataResponse<dynamic>(true, (int)HttpStatusCode.OK, "Lista Creada", data: rsp);
+        }
+        catch (Exception e)
+        {
+            return new BaseResponse(false, (int)HttpStatusCode.InternalServerError, e.Message);
+        }
     }
 
     [HttpGet]
     [Route("CarteleraController/GetById")]
-    public CarteleraModel GetById([FromQuery] int id)
+    public async Task<BaseResponse> GetById([FromQuery] int id)
     {
-        CarteleraModel? n = DataList.FirstOrDefault(x => x.id == id);
-        return n;
+        try
+        {
+            var rsp = await repository.GetListBy<dynamic>(CarteleraModel.GetById(id));
+            return new DataResponse<dynamic>(true, (int)HttpStatusCode.OK, "Objeto Encontrado", data: rsp);
+        }
+        catch (Exception e)
+        {
+            return new BaseResponse(false, (int)HttpStatusCode.InternalServerError, e.Message);
+        }
+
     }
 
     [HttpPost]
     [Route("CarteleraController/Create")]
-    public BaseResponse Post([FromBody] CarteleraModel dataInput)
+    public async Task<BaseResponse> Post([FromBody] CarteleraModel dataInput)
     {
-        DataList.Add(dataInput);
-        return new BaseResponse(true, (int)HttpStatusCode.Created, "Creado");
+        try
+        {
+            var rsp = await repository.InsertByQuery(dataInput.Insert());
+            return new DataResponse<dynamic>(true, (int)HttpStatusCode.OK, "Entidad Creada", data: rsp);
+        }
+        catch (Exception e)
+        {
+            return new BaseResponse(false, (int)HttpStatusCode.InternalServerError, e.Message);
+        }
     }
 
     [HttpDelete]
     [Route("CarteleraController/Delete")]
-    public BaseResponse Delete([FromQuery] int id)
+    public async Task<BaseResponse> Delete([FromQuery] int id)
     {
-        CarteleraModel? n = DataList.FirstOrDefault(x => x.id == id);
-        if (n == null)
+        try
         {
-            return new BaseResponse(false, (int)HttpStatusCode.NotFound, "El objeto no fue encontrado");
+            var rsp = await repository.InsertByQuery(CarteleraModel.Delete(id));
+            return new DataResponse<dynamic>(true, (int)HttpStatusCode.OK, "Entidad Borrada Correctamente", data: rsp);
         }
-        else
+        catch (Exception e)
         {
-            DataList.Remove(n);
-            return new BaseResponse(true, (int)HttpStatusCode.OK, "Objeto parcialmente eliminado");
+            return new BaseResponse(false, (int)HttpStatusCode.InternalServerError, e.Message);
         }
     }
 
     [HttpPut]
     [Route("CarteleraController/Modificar")]
-    public BaseResponse Modificar([FromBody] CarteleraModel dataInput)
+    public async Task<BaseResponse> Modificar([FromBody] CarteleraModel dataInput)
     {
-        CarteleraModel? tmp = DataList.FirstOrDefault(x => x.id == dataInput.id);
-        if (tmp != null)
+        try
         {
-            DataList.Remove(tmp);
-            tmp = dataInput;
-            DataList.Add(tmp);
-            return new BaseResponse(true, (int)HttpStatusCode.Created, "Modificado");
+            var rsp = await repository.InsertByQuery(dataInput.Modificar());
+            return new DataResponse<dynamic>(true, (int)HttpStatusCode.OK, "Entidad Modificada Correctamente", data: rsp);
         }
-        else
+        catch (Exception e)
         {
-            return new BaseResponse(true, (int)HttpStatusCode.Created, "No encontrado");
+            return new BaseResponse(false, (int)HttpStatusCode.InternalServerError, e.Message);
         }
     }
     [HttpPatch]
     [Route("CarteleraController/ModificarParcial")]
-    public BaseResponse ModificarParcial([FromBody] CarteleraModel dataInput)//Para mejorar
+    public async Task <BaseResponse> ModificarParcial([FromBody] CarteleraModel dataInput)//Para mejorar
     {
-        if (dataInput.id == null)
+       try
         {
-            return new BaseResponse(false, (int)HttpStatusCode.BadRequest, "El parametro id es requerido");
+            var rsp = await repository.InsertByQuery(dataInput.Modificar());
+            return new DataResponse<dynamic>(true, (int)HttpStatusCode.OK, "Entidad Modificada Correctamente", data: rsp);
         }
-
-        CarteleraModel? tmp = DataList.FirstOrDefault(x => x.id == dataInput.id);
-        if (tmp != null)
+        catch (Exception e)
         {
-            DataList.Remove(tmp);
-            DataList.Add(dataInput);
-            return new BaseResponse(true, (int)HttpStatusCode.Created, "Modificado");
-        }
-        else
-        {
-            return new BaseResponse(true, (int)HttpStatusCode.Created, "No encontrado");
+            return new BaseResponse(false, (int)HttpStatusCode.InternalServerError, e.Message);
         }
     }
 }
