@@ -27,6 +27,32 @@
   },
   {
     "ContainingType": "ATDapi.Controllers.CarteleraController",
+    "Method": "Delete",
+    "RelativePath": "CarteleraController/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ATDapi.Responses.BaseResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ATDapi.Controllers.CarteleraController",
     "Method": "Get",
     "RelativePath": "CarteleraController/Get",
     "HttpMethod": "GET",
@@ -46,16 +72,16 @@
     ]
   },
   {
-    "ContainingType": "ATDapi.Controllers.DemoController",
-    "Method": "Delete",
-    "RelativePath": "Delete",
-    "HttpMethod": "DELETE",
+    "ContainingType": "ATDapi.Controllers.CarteleraController",
+    "Method": "GetById",
+    "RelativePath": "CarteleraController/GetById",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Guid",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
@@ -72,88 +98,16 @@
     ]
   },
   {
-    "ContainingType": "ATDapi.Controllers.DemoController",
-    "Method": "Get",
-    "RelativePath": "Get",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "ATDapi.Responses.BaseResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ATDapi.Controllers.DemoController",
-    "Method": "Patch",
-    "RelativePath": "Patch",
-    "HttpMethod": "PATCH",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dataInput",
-        "Type": "ATDapi.Models.SimpleModel",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ATDapi.Responses.BaseResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ATDapi.Controllers.DemoController",
-    "Method": "Post",
-    "RelativePath": "Post",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dataInput",
-        "Type": "ATDapi.Models.SimpleModel",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ATDapi.Responses.BaseResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ATDapi.Controllers.DemoController",
-    "Method": "Put",
-    "RelativePath": "Put",
+    "ContainingType": "ATDapi.Controllers.CarteleraController",
+    "Method": "Modificar",
+    "RelativePath": "CarteleraController/Modificar",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dataInput",
-        "Type": "ATDapi.Models.SimpleModel",
+        "Type": "ATDapi.Models.CarteleraModel",
         "IsRequired": true
       }
     ],
@@ -168,5 +122,52 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "ATDapi.Controllers.CarteleraController",
+    "Method": "ModificarParcial",
+    "RelativePath": "CarteleraController/ModificarParcial",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dataInput",
+        "Type": "ATDapi.Models.CarteleraModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ATDapi.Responses.BaseResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ATDapi.Controllers.FileController",
+    "Method": "PostU",
+    "RelativePath": "FileController/PostU",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
