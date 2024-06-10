@@ -44,21 +44,6 @@ public class CarteleraController : ControllerBase
 
     }
 
-    [HttpPost]
-    [Route("CarteleraController/Create")]
-    public async Task<BaseResponse> Post([FromBody] CarteleraModel dataInput)
-    {
-        try
-        {
-            var rsp = await repository.InsertByQuery(dataInput.Insert());
-            return new DataResponse<dynamic>(true, (int)HttpStatusCode.OK, "Entidad Creada", data: rsp);
-        }
-        catch (Exception e)
-        {
-            return new BaseResponse(false, (int)HttpStatusCode.InternalServerError, e.Message);
-        }
-    }
-
     [HttpDelete]
     [Route("CarteleraController/Delete")]
     public async Task<BaseResponse> Delete([FromQuery] int id)
@@ -88,6 +73,7 @@ public class CarteleraController : ControllerBase
             return new BaseResponse(false, (int)HttpStatusCode.InternalServerError, e.Message);
         }
     }
+
     [HttpPatch]
     [Route("CarteleraController/ModificarParcial")]
     public async Task<BaseResponse> ModificarParcial([FromBody] CarteleraModel dataInput)//Para mejorar
@@ -102,6 +88,7 @@ public class CarteleraController : ControllerBase
             return new BaseResponse(false, (int)HttpStatusCode.InternalServerError, e.Message);
         }
     }
+
     [HttpPost]
     [Route("CarteleraController/PostU")]
     public async Task<IActionResult> PostU(CarteleraModel upload)
