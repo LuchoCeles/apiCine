@@ -651,19 +651,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hilet.HILET\\.nuget\\packages\\": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hilet.HILET\\apiCine\\ATDapi.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Facultad\\Tercer año\\algoritmos\\apiCine\\ATDapi.csproj",
       "projectName": "ATDapi",
-      "projectPath": "C:\\Users\\hilet.HILET\\apiCine\\ATDapi.csproj",
-      "packagesPath": "C:\\Users\\hilet.HILET\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hilet.HILET\\apiCine\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\Facultad\\Tercer año\\algoritmos\\apiCine\\ATDapi.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\Desktop\\Facultad\\Tercer año\\algoritmos\\apiCine\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\hilet.HILET\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -726,7 +731,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

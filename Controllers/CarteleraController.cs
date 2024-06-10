@@ -90,9 +90,9 @@ public class CarteleraController : ControllerBase
     }
     [HttpPatch]
     [Route("CarteleraController/ModificarParcial")]
-    public async Task <BaseResponse> ModificarParcial([FromBody] CarteleraModel dataInput)//Para mejorar
+    public async Task<BaseResponse> ModificarParcial([FromBody] CarteleraModel dataInput)//Para mejorar
     {
-       try
+        try
         {
             var rsp = await repository.InsertByQuery(dataInput.Modificar());
             return new DataResponse<dynamic>(true, (int)HttpStatusCode.OK, "Entidad Modificada Correctamente", data: rsp);
@@ -101,5 +101,19 @@ public class CarteleraController : ControllerBase
         {
             return new BaseResponse(false, (int)HttpStatusCode.InternalServerError, e.Message);
         }
+    }
+    public async Task<IActionResult> PostU(CarteleraModel upload)
+    {
+        if (upload == null || upload.File.Length == 0) return BadRequest("No se proporcionó ningún archivo.");
+
+        var path = Path.Combine("C:\\Users\\hilet.HILET\\cine\\public\\", upload.File.FileName);
+
+        using (var stream = new FileStream(path, FileMode.Create))
+        {
+            await upload.File.CopyToAsync(stream);
+        }
+        var file = "\\img_peliculas\\img_1\\" + upload.File.FileName;
+        upload.url = file;
+        return Ok(new { file });
     }
 }
