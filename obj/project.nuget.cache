@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S6Wa9O/eLenWIB1TvZ4109SPZIXuBNqin4WbM+chnkcV1zUqHHOQmiRin9elGMeJRKun/CJk/8z4Hgcmm33Yaw==",
+  "dgSpecHash": "n2y0fMDUmLxbCH2aTe7cwc+KhIpO70AvNnighx/GUGWh506QINKrV1408rGlL1rwSp4CvFVOhyVzd6qvMiiIug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\Facultad\\Tercer año\\algoritmos\\apiCine\\ATDapi.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\apiCine\\ATDapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

@@ -102,11 +102,14 @@ public class CarteleraController : ControllerBase
             return new BaseResponse(false, (int)HttpStatusCode.InternalServerError, e.Message);
         }
     }
+    [HttpPost]
+    [Route("CarteleraController/PostU")]
     public async Task<IActionResult> PostU(CarteleraModel upload)
     {
         if (upload == null || upload.File.Length == 0) return BadRequest("No se proporcionó ningún archivo.");
 
-        var path = Path.Combine("C:\\Users\\hilet.HILET\\cine\\public\\", upload.File.FileName);
+        //var path = Path.Combine("C:\\Users\\hilet.HILET\\cine\\public\\", upload.File.FileName);
+        var path = Path.Combine("C:\\Users\\Usuario\\Desktop\\cine\\public\\", upload.File.FileName);
 
         using (var stream = new FileStream(path, FileMode.Create))
         {
