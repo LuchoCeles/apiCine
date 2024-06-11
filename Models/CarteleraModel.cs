@@ -11,7 +11,7 @@ public class CarteleraModel
     public string director { get; set; }
     public string actores { get; set; }
     public IFormFile File { get; set; }
-    public string url { get; set; }
+    public string? url { get; set; }
 
     public static string GetAll()
     {

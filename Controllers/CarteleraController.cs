@@ -91,12 +91,12 @@ public class CarteleraController : ControllerBase
 
     [HttpPost]
     [Route("CarteleraController/PostU")]
-    public async Task<IActionResult> PostU(CarteleraModel upload)
+    public async Task<IActionResult> PostU([FromForm]CarteleraModel upload)
     {
         if (upload == null || upload.File.Length == 0) return BadRequest("No se proporcionó ningún archivo.");
 
         //var path = Path.Combine("C:\\Users\\hilet.HILET\\cine\\public\\", upload.File.FileName);
-        var path = Path.Combine("C:\\Users\\Usuario\\Desktop\\cine\\public\\", upload.File.FileName);
+        var path = Path.Combine("C:\\Users\\Usuario\\Desktop\\cine\\img_peliculas\\img_1\\", upload.File.FileName);
 
         using (var stream = new FileStream(path, FileMode.Create))
         {
@@ -104,6 +104,7 @@ public class CarteleraController : ControllerBase
         }
         var file = "\\img_peliculas\\img_1\\" + upload.File.FileName;
         upload.url = file;
+        await repository.InsertByQuery(upload.Insert());
         return Ok(new { file });
     }
 }
